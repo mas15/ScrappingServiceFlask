@@ -1,12 +1,5 @@
 import os
-import hashlib
-
 DOWNLOAD_DIR = "download"
-
-
-def generate_id(url):
-    hashed_id = hashlib.md5(url.encode('utf-8'))
-    return hashed_id.hexdigest()
 
 
 def _scrapped_text_filename(task_id):

@@ -1,6 +1,15 @@
-FROM python:3.6.7
-COPY app /app
-WORKDIR app
-RUN pip install --upgrade pip
+FROM python:3.6-alpine
+
+COPY requirements.txt .
+
 RUN pip install -r requirements.txt
-CMD nameko run --config config.yml service
+
+COPY service.py .
+
+COPY app /app
+
+COPY entrypoint.sh .
+
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]

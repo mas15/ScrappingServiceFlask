@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-from utils import make_dir_for_images, save_scrapped_image, save_scrapped_text
+from app.utils import make_dir_for_images, save_scrapped_image, save_scrapped_text
 
 
 def scrape_from_site(url, task_id):
