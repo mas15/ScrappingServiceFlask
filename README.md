@@ -1,4 +1,4 @@
-# Scrapping project
+# Scrapping project (Flask variant)
 
 Mikroserwis pobierający zdjęcia i tekst ze stron www.
 Funkcjonalność
